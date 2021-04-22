@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --primary-gray: #6c757d;
+  --light-gray: #e9ecef;
+  --primary-green: #52b788;
+  --primary-red: #e05263;
+  --second-green: #8affc1;
+  --third-green: #7ddf64;
+}
+
+body {
+  background-color: var(--light-gray);
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+  background-color: var(--light-gray);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  background-color: white;
+}
+
+.nav h2 {
+  margin-left: 2rem;
+  color: var(--primary-gray)
+
+}
+
+.form_div {
+  background-color: white;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.add_form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.add_form h3{
+  margin-bottom: 1rem;
+  margin-top: .6rem;
+  font-size: 1.3rem;
+  color: var(--primary-gray)
+}
+
+.add_form input {
+  margin-bottom: .6rem;
+  padding: .5rem 1rem;
+  width: 20rem; 
+  border: 1px solid (0, 0, 0, 0.2);
+}
+
+.add_form button{
+  padding: .5rem;
+  margin-bottom: 1rem;
+  color: white;
+  background-color: var(--primary-green);
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add_form button:hover {
+  animation: colors 1s ease;
+}
+
+.list_item {
+  background-color: white;
+  margin-bottom: .6rem;
+  padding: .8rem;
+}
+
+.items_all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_item h4 {
+  color: var(--primary-gray);
+  font-size: 1.2rem;
+}
+
+.fa-trash {
+  align-items: center;
+  margin-left: .6rem;
+  margin-right: .6rem;
+  font-size: 1.2rem;
+  color: var(--primary-red);
+  cursor: pointer;
+}
+
+.fa-trash:hover{
+  animation: scale 1s ease;
+}
+
+.fa-check-circle {
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--primary-green);
+  cursor: pointer;
+}
+
+.fa-check-circle:hover{
+  animation: scale 1s ease-in-out;
+}
+
+.error {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--primary-red)
+}
+
+@keyframes colors {
+  0% {
+    background-color: var(--primary-green);
+  }
+  50% {
+    opacity: 1;
+    background-color: var(--second-green);
+  }
+  100% {
+    opacity: 1;
+    background-color: var(--primary-green);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
